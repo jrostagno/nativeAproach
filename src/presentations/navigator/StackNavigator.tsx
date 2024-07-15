@@ -8,6 +8,7 @@ import SwitchetsScreen from '../screens/switchets/SwitchetsScreen';
 import AlertsScreen from '../screens/alerts/AlertsScreen';
 import InputsScreen from '../screens/inputs/InputsScreen';
 import PullToRefresh from '../screens/pullToRefresh/PullToRefresh';
+import CustonSectionListScreen from '../components/ui/CustonSectionListScreen';
 
 const Stack = createStackNavigator();
 
@@ -21,6 +22,10 @@ export const StackNavigation = () => {
       <Stack.Screen name="AlertScreen" component={AlertsScreen} />
       <Stack.Screen name="TextInputScreen" component={InputsScreen} />
       <Stack.Screen name="PullToRefreshScreen" component={PullToRefresh} />
+      <Stack.Screen
+        name="CustomSectionListScreen"
+        component={CustonSectionListScreen}
+      />
     </Stack.Navigator>
   );
 };

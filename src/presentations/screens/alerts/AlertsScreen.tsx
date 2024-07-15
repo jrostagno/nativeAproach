@@ -6,6 +6,7 @@ import Title from '../../components/ui/Title';
 import {globalStyles} from '../../../config/theme/theme';
 import Button from '../../components/ui/Button';
 import {Alert, View} from 'react-native';
+import {showPrompt} from '../../../config/theme/adapters/propmt.adapter';
 
 const AlertsScreen = () => {
   const createTwoButtonAlert = () =>
@@ -32,15 +33,21 @@ const AlertsScreen = () => {
       {text: 'OK', onPress: () => console.log('OK Pressed')},
     ]);
 
-  const showPrompt = () => {
-    Alert.prompt(
-      'Email ?',
-      'iofhsioufhosf soifejoseinf',
-      (value: string) => console.log(value),
-      'secure-text',
-      'defecto',
-      'number-pad',
-    );
+  const OnShowPrompt = () => {
+    showPrompt({
+      title: 'Alert Title',
+      subtitle: 'My Alert Msg',
+      buttons: [{text: 'button alert', onPress: () => console.log('ok')}],
+    });
+
+    // Alert.prompt(
+    //   'Email ?',
+    //   'iofhsioufhosf soifejoseinf',
+    //   (value: string) => console.log(value),
+    //   'secure-text',
+    //   'defecto',
+    //   'number-pad',
+    // );
   };
 
   return (
@@ -52,7 +59,7 @@ const AlertsScreen = () => {
       <Button text="Button 3 buttons" onPress={createThreeButtonAlert} />
       <View style={{height: 10}} />
 
-      <Button text="prompt - Input  " onPress={showPrompt} />
+      <Button text="prompt - Input  " onPress={OnShowPrompt} />
       <View style={{height: 10}} />
     </CustomView>
   );

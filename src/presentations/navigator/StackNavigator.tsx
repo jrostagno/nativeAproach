@@ -9,6 +9,7 @@ import AlertsScreen from '../screens/alerts/AlertsScreen';
 import InputsScreen from '../screens/inputs/InputsScreen';
 import PullToRefresh from '../screens/pullToRefresh/PullToRefresh';
 import CustonSectionListScreen from '../components/ui/CustonSectionListScreen';
+import ModalScreen from '../screens/modal/ModalScreen';
 
 const Stack = createStackNavigator();
 
@@ -26,6 +27,7 @@ export const StackNavigation = () => {
         name="CustomSectionListScreen"
         component={CustonSectionListScreen}
       />
+      <Stack.Screen name="ModalScreen" component={ModalScreen} />
     </Stack.Navigator>
   );
 };

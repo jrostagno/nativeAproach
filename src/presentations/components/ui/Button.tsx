@@ -1,10 +1,10 @@
 import React from 'react';
-import {Pressable, StyleProp, Text, ViewProps} from 'react-native';
+import {Pressable, StyleProp, Text, ViewStyle} from 'react-native';
 import {colors, globalStyles} from '../../../config/theme/theme';
 
 interface Props {
   text: string;
-  style?: StyleProp<ViewProps>;
+  style?: StyleProp<ViewStyle>;
   onPress: () => void;
 }
 

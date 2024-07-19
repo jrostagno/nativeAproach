@@ -11,6 +11,7 @@ import PullToRefresh from '../screens/pullToRefresh/PullToRefresh';
 import CustonSectionListScreen from '../components/ui/CustonSectionListScreen';
 import ModalScreen from '../screens/modal/ModalScreen';
 import InfinityScrollScreen from '../screens/infinitScroll/InfinityScrollScreen';
+import SlidesScreen from '../components/ui/SlidesScreen';
 
 const Stack = createStackNavigator();
 
@@ -33,6 +34,7 @@ export const StackNavigation = () => {
         name="InfiniteScrollScreen"
         component={InfinityScrollScreen}
       />
+      <Stack.Screen name="SlidesScreen" component={SlidesScreen} />
     </Stack.Navigator>
   );
 };

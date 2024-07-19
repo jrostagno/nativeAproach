@@ -12,6 +12,7 @@ import CustonSectionListScreen from '../components/ui/CustonSectionListScreen';
 import ModalScreen from '../screens/modal/ModalScreen';
 import InfinityScrollScreen from '../screens/infinitScroll/InfinityScrollScreen';
 import SlidesScreen from '../components/ui/SlidesScreen';
+import {ChangeThemeScreen} from '../screens/theme/ChangeThemeScreen';
 
 const Stack = createStackNavigator();
 
@@ -35,6 +36,7 @@ export const StackNavigation = () => {
         component={InfinityScrollScreen}
       />
       <Stack.Screen name="SlidesScreen" component={SlidesScreen} />
+      <Stack.Screen name="ChangeThemeScreen" component={ChangeThemeScreen} />
     </Stack.Navigator>
   );
 };
